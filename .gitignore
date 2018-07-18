@@ -19,5 +19,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+.ds_store
+gemfile.lock
+
 # Ignore Spring files.
 /spring/*.pid
