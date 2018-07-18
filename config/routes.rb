@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'static_pages/about'
-  get 'static_pages/contact'
-  get 'static_pages/help'
-  get 'static_pages/home'
+  get '/about',   to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
+  get '/help',    to: 'static_pages#help'
+  get '/signup',   to: 'users#new'
   root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  #   resources :productsw
 
   # Example resource route with options:
   #   resources :products do
