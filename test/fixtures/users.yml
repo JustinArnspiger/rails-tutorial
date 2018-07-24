@@ -1,4 +1,22 @@
+admin_user:
+  name: Admin User
+  email: admin@emailaddress.fortesting
+  password_digest: <%= User.digest('password') %>
+  admin: true
+
 valid_user:
   name: Valid User
   email: valid.user@fortesting.test
   password_digest: <%= User.digest('password') %>
+
+other_user:
+  name: Other User
+  email: other.user@fortesting.test
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "Generated User #{n}" %>
+  email: <%= "generated_user_#{n}@emailaddress.fortesting" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
